@@ -6,7 +6,7 @@
 }
 
 .heroes {
-    margin: 0 0 2em 0;
+    /* margin: 0 0 2em 0; */
     list-style-type: none;
     padding: 0;
     width: 15em;
@@ -52,4 +52,29 @@
     height: 1.8em;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
+}
+
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    margin: 0;
+    padding: 1em;
+    border-right: 1px solid gray;
+}
+
+article {
+    padding: 1em;
+    overflow: hidden;
 }
