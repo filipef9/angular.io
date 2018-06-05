@@ -67,6 +67,10 @@ header, footer {
     text-align: center;
 }
 
+div.clear-layout {
+    clear: left;
+}
+
 nav {
     float: left;
     margin: 0;
