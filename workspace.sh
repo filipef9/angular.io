@@ -2,10 +2,10 @@
 
 set -eu
 
-dockerComposeFile=workspace.yml
+dockerComposeFile='workspace.yml'
 
 function showUsage() {
-    echo "usage: $0 start|stop|status|help"
+    echo "usage: $0 start|access|stop|status|help"
 }
 
 function getStatus() {
@@ -16,6 +16,14 @@ function start() {
     docker-compose -f $dockerComposeFile up -d &&\
     getStatus
     docker-compose -f $dockerComposeFile exec -u node workspace /bin/sh
+}
+
+function access() {
+    if [[ "$(docker-compose -f workspace.yml ps | grep workspace | awk '{print $1}')" != "" ]]; then
+        docker-compose -f $dockerComposeFile exec -u node workspace /bin/sh
+    else
+        start
+    fi
 }
 
 function stop() {
@@ -35,6 +43,9 @@ case "$1" in
         ;;
     start)
         start
+        ;;
+    access)
+        access
         ;;
     stop)
         stop
