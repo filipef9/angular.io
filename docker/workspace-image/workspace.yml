@@ -3,10 +3,10 @@ version: '2'
 services:
   workspace:
     image: node-workspace:8.11.2
-    build: ./docker/workspace-image
+    build: ./
     ports:
       - 4200:4200
     volumes:
-      - ./:/workspace
+      - ./../../:/workspace
     command: tail -f /dev/null
     

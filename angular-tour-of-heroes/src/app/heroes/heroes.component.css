@@ -53,32 +53,3 @@
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
 }
-
-div.container {
-    width: 100%;
-    border: 1px solid gray;
-}
-
-header, footer {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
-}
-
-div.clear-layout {
-    clear: left;
-}
-
-nav {
-    float: left;
-    margin: 0;
-    padding: 1em;
-    border-right: 1px solid gray;
-}
-
-article {
-    padding: 1em;
-    overflow: hidden;
-}
